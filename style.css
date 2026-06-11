@@ -12,12 +12,12 @@ body {
 html{
     scroll-behavior: smooth;
 }
-#inicio, #produtos {
+/* #inicio, #produtos {
     scroll-margin-top: 100px;
 }
 #sobre, #servicos {
     scroll-margin-top: 120px;
-}
+} */
 #banner {
     position: relative;
 }
@@ -121,7 +121,7 @@ html{
 
 
 /* HEADER */
-.header {
+.header {   
     position: fixed;
     width: 100%;
     display: flex;
@@ -137,15 +137,20 @@ html{
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: all 0.5s ease-in-out;
+}
+.header-oculto {
+    transform: translateY(-100%)
 }
 .nav-header ul {
     list-style: none;
     display: flex;
     gap: 50px;
     margin-right: 50px;
+    margin-bottom: 0    ;
 }
 .nav-header a {
-    font-size: 20px;
+    font-size: clamp(15px, 1vh, 20px);
     text-decoration: none;
     color: #fff;
     font-weight: 400;
@@ -155,9 +160,10 @@ html{
     color: #18AF96;
 }
 .logo-header {
-    width: 250px;
+    width: clamp(150px, 20vh, 250px);
     margin: 5px 10px;
 }
+
 
 /* MAIN */
 /* CARROSSEL */
@@ -173,7 +179,7 @@ html{
 .carousel-bg-img {
     position: relative;
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -206,16 +212,16 @@ html{
 }
 .hero-content h1 {
     max-width: 1200px;
-    font-size: 35px;
+    font-size: clamp(25px, 30px, 30px);
 }
 .hero-content strong{
     color: #25e2c3;
-    font-size: 45px;
+    font-size: clamp(30px, 35px, 40px);
     font-weight: 800;
     filter: drop-shadow(0px 0px 10px rgba(24, 175, 150, 0.2));
 }
 .hero-content p {
-    font-size: 20px;
+    font-size: clamp(15px, 17px, 20px);
     transform: translateX(0px);
     max-width: 600px;
     margin-right: 50px;
@@ -253,7 +259,7 @@ html{
 
 /* SEÇÃO SOBRE  */
 .sobre {
-    height: 900px;
+    height: 120vh;
     width: 100%;
     padding: 0px;
     display: flex;
@@ -266,20 +272,20 @@ html{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 20px;
     gap: 100px;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 .sobre-content-img {
-    width: 450px;
+    width: clamp(350px, 400px, 450px);
     border-radius: 20px;
     margin: 0px 0px;
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
     transition: all ease 0.5s;
 }
 .sobre-content-img:hover {
     transform: translateY(-10px);
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
 }
 .sobre-content-flex {
     display: flex;
@@ -296,10 +302,10 @@ html{
     filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.1));
 }
 .sobre-content-flex p {
-    margin: 20px 0px;
-    font-size: 20px;
+    margin: 10px 0px;
+    font-size: clamp(15px, 17px, 20px);
     text-align: center;
-    max-width: 800px;
+    max-width: clamp(400px, 500px, 600px);
 }
 .sobre-content-cards {
     margin-top: 20px;
@@ -308,11 +314,11 @@ html{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     max-width: max-content;
 }
 .sobre-card {
-    box-shadow: 5px 5px 10px rgba(12, 41, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(12, 41, 0, 0.05);
     padding: 10px;
     border: 1px solid #014D41;
     border-radius: 10px;
@@ -321,16 +327,16 @@ html{
     align-items: center;
     text-align: left;
     justify-content: left;
-    width: 600px;
+    width: clamp(400px, 500px, 600px);
     transition: all ease 0.3s;
 }
 .sobre-card:hover {
     border: 1px solid #18AF96;
     transform: translateY(-2px);
-    box-shadow: 5px 5px 20px rgba(0, 105, 30, 0.3);
+    box-shadow: 5px 5px 20px rgba(0, 105, 30, 0.2);
 }
 .sobre-card img {
-    width: 60px;
+    width: clamp(30px, 40px, 50px);
     box-shadow: 0px 0px 0px transparent;
 }
 .sobre-card-content {
@@ -338,7 +344,7 @@ html{
 }
 .sobre-card-content h3 {
     color: #022D17;
-    font-size: 20px;
+    font-size: clamp(15px, 20px, 25px);
 }
 .sobre-card p {
     font-size: 13px;
@@ -356,11 +362,11 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e4f5f0d9;
+    background-color: #f0f0f0d9;
     color: black;
 }
 .servicos h2 {
-    font-size: 50px;
+    font-size: clamp(40px, 45px, 50px);
     font-weight: 700;
     color: #043D37;
     padding-bottom: 10px;
@@ -384,19 +390,19 @@ html{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: clamp(20px, 2vw, 40px);
+    gap: clamp(20px, 30px, 40px);
 }
 .servicos-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0px;
     padding: 20px 10px;
     box-shadow: transparent;
     border-radius: 10px;
     width: clamp(200px, 15vw, 250vw);
-    border: 1px solid #014D41;
+    /* border: 1px solid #014D41; */
     transition: all ease 0.5s;
 }
 .servicos-btn {
@@ -425,7 +431,7 @@ html{
 }
 
 .servicos-card img {
-    width: 150px;
+    width: clamp(100px,125px,150px);
 }
 .servicos-card-content {
     text-align: center;

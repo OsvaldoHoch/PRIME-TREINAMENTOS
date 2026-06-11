@@ -15,7 +15,7 @@
 </head>
 <body>
 <!-- HEADER  -->
-    <header class="header">
+    <header class="header" id="mheader">
         <a href="#inicio" onclick="location.reload(); return false;"><img src="imgs/Logo.svg" alt="" class="logo-header"></a>
         <nav class="nav-header">
             <ul>
@@ -140,7 +140,7 @@
     <!-- SERVIÇOS  -->
         <section class="servicos" id="servicos">
             <h2 class="reveal delay1">PRINCIPAIS SERVIÇOS</h2>
-            <p>Soluções completas para garantir segurança, conformidade legal e capacitação profissional.</p>
+            <p class="reveal delay2">Soluções completas para garantir segurança, conformidade legal e capacitação profissional.</p>
             <div class="servicos-content">
                 <div class="servicos-content-flex">
                     <div class="servicos-cards">
@@ -219,24 +219,7 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"
         ></script>  
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-
-            // Se quiser animar apenas uma vez:
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.5
-});
-
-document.querySelectorAll(".reveal").forEach(el => {
-    observer.observe(el);
-});
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
