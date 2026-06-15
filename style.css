@@ -72,7 +72,7 @@ html{
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    /* height: 40px; */
     width: fit-content;
     padding: 10px 15px;
     background-color: rgba(188, 255, 227, 0.24);
@@ -83,7 +83,7 @@ html{
     transition: all 0.3s ease-in-out;
 }
 .selo span {
-    font-size: 13px;
+    font-size: clamp(13px, 1.5vh, 20px);
     font-weight: 600;
 }
 .selo img {
@@ -150,7 +150,7 @@ html{
     margin-bottom: 0    ;
 }
 .nav-header a {
-    font-size: clamp(15px, 20px, 25px);
+    font-size: clamp(15px, 2vh, 25px);
     text-decoration: none;
     color: #fff;
     font-weight: 400;
@@ -160,7 +160,7 @@ html{
     color: #18AF96;
 }
 .logo-header {
-    width: clamp(150px, 10vh, 300px);
+    width: clamp(150px, 20vh, 300px);
     margin: 5px 10px;
 }
 
@@ -243,7 +243,7 @@ html{
     border-radius: 10px;
     border: 0px solid transparent;
     color: aliceblue;
-    font-size: 15px;
+    font-size: clamp(15px, 1vw, 25px);
     transition: all ease 0.3s;
     font-weight: 500;
     box-shadow: 0px 0px 20px rgba(235, 152, 35, 0.2);
@@ -271,13 +271,13 @@ html{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: clamp(0px, 20vh, 20px   );
+    margin-top: clamp(0px, 20vh, 20px);
     padding: 20px;
     gap: 100px;
     max-width: 1000px;
 }
 .sobre-content-img {
-    width: 400px;
+    width: 550px;
     margin: 0px 0px;
     transition: all ease 0.5s;
 }
@@ -289,8 +289,10 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 300px;
-    height: clamp(400px, 60vh, 500px);
+    min-width: 22vw;
+    height: 500px;
+    width: fit-content;
+    height: clamp(400px, 70vh, 500px);
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgba(4,54,65, 0.3);
@@ -305,7 +307,7 @@ html{
     max-width: 1200px;
 }
 .sobre-content-flex h2 {
-    font-size: clamp(30px, 5vh, 40px);
+    font-size: clamp(30px, 10vh, 40px);
     font-weight: 700;
     color: #043D37;
     filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.1));
@@ -314,7 +316,7 @@ html{
     margin: 10px 0px;
     font-size: clamp(15px, 2vh, 20px);
     text-align: center;
-    max-width: clamp(400px, 500px, 600px);
+    max-width: clamp(450px, 30vw, 600px);
 }
 .sobre-content-cards {
     margin-top: 20px;
@@ -336,7 +338,7 @@ html{
     align-items: center;
     text-align: left;
     justify-content: left;
-    width: clamp(500px, 30vw, 600px);
+    width: clamp(550px, 30vw, 600px);
     transition: all ease 0.3s;
 }
 .sobre-card:hover {
@@ -345,7 +347,7 @@ html{
     box-shadow: 0px 0px 10px rgba(24,175,150, 0.3);
 }
 .sobre-card img {
-    width: clamp(30px, 40px, 50px);
+    width: clamp(40px, 5vh, 70px);
     box-shadow: 0px 0px 0px transparent;
 }
 .sobre-card-content {
@@ -353,10 +355,10 @@ html{
 }
 .sobre-card-content h3 {
     color: #022D17;
-    font-size: clamp(15px, 20px, 25px);
+    font-size: clamp(15px, 10vh, 25px);
 }
 .sobre-card p {
-    font-size: 13px;
+    font-size: 15px;
     text-align: left;
     margin: 5px 1px;
 }
@@ -410,7 +412,7 @@ html{
     gap: 0px;
     padding: 20px 20px;
     box-shadow: transparent;
-    border-radius: 10px;
+    border-radius: 20px;
     width: clamp(200px, 15vw, 300px);
     /* border: 1px solid #014D41; */
     transition: all ease 0.5s;
@@ -426,7 +428,7 @@ html{
     position: relative;
     transform: translateY(-5px);
     /* border: 2px solid #014D41; */
-    box-shadow: 0px 0px 20px rgba(0, 88, 12, 0.3);
+    box-shadow: 0px 0px 20px rgba(0,0,0, 0.2);
     .servicos-btn {
         background-color: #014D41;
         color: white;
@@ -491,31 +493,31 @@ html{
 }
 
 .treinamentos-cards {
-    min-width: 1200px;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: clamp(15px, 2vh, 30px);
 }
 .treinamentos-card {
     background-color: #fdfdfd;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: space-between;
     align-items: start;
     gap: 10px;
-    border: 1px solid #043D37;
+    border: 1px solid rgba(0, 88, 12, 0.1);
     box-shadow: 0 0 7px rgba(24, 175, 150, 0.1);
     border-radius: 10px;
-    width: 250px;
+    width: 300px;
+    height: 200px;
     padding: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 .treinamentos-card:hover {
-    transform: translateY(-5px);
+    border: 1px solid #06816f;
     box-shadow: 0px 5px 12px rgba(13,110,94, 0.1);
 }
 .treinamentos-card-content {
@@ -525,9 +527,54 @@ html{
     justify-content: center;
     align-items: center;
 }
+.treinamentos-card-img {
+    background-color: rgba(24, 175, 150, 0.1);
+    border-radius: 10px;
+}
+.treinamentos-card-img img {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(41%) saturate(1235%) hue-rotate(127deg) brightness(94%) contrast(99%);
+}
+.treinamentos-card-content h3 {
+    color: #022D17;
+    margin: 0px 10px;
+    font-size: 25px;
+    font-weight: 800;
+}
+.treinamentos-card span {
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.treinamentos-certificados {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #043D37;
+    color: #f0f0f0;
+}
+.treinamentos-certificados-content {
+    display: flex;
+    flex-direction: row;
+}
+.treinamentos-certificados-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+    transition: all ease 0.7s;
+}
+.treinamentos-certificados-card:hover {
+    background-color: #014D41;
+}
+.treinamentos-certificados-card img {
+    filter: brightness(0) saturate(100%) invert(61%) sepia(56%) saturate(4882%) hue-rotate(135deg) brightness(96%) contrast(81%);
+}
 
 /* DISPONIBILIDADE  */
-.disponibilidade {
+.modalidades {
     background-color: #043D37;
     padding: 50px;
 }
