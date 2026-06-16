@@ -218,10 +218,10 @@ html{
     color: #25e2c3;
     font-size: clamp(40px, 5vh, 60px);
     font-weight: 800;
-    filter: drop-shadow(0px 0px 10px rgba(24, 175, 150, 0.2));
+    filter: drop-shadow(0px 0px 10px rgba(24, 175, 150, 0.3));
 }
 .hero-content p {
-    font-size: clamp(15px, 2.5vh, 22px);
+    font-size: clamp(15px, 3vh, 22px);
     transform: translateX(0px);
     margin-right: 50px;
     font-weight: 300;
@@ -568,9 +568,6 @@ html{
     padding: 0px 30px;
     width: fit-content;
     transition: all ease 0.7s;
-}
-.treinamentos-certificados-card:hover {
-    background-color: #014D41;
 }
 .treinamentos-certificados-card img {
     filter: brightness(0) saturate(100%) invert(61%) sepia(56%) saturate(4882%) hue-rotate(135deg) brightness(96%) contrast(81%);
