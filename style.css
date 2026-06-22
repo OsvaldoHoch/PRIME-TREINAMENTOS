@@ -83,7 +83,7 @@ html{
     transition: all 0.3s ease-in-out;
 }
 .selo span {
-    font-size: clamp(13px, 1.5vh, 20px);
+    font-size: clamp(13px, 1.5vh, 16px);
     font-weight: 600;
 }
 .selo img {
@@ -277,7 +277,7 @@ html{
     max-width: 1000px;
 }
 .sobre-content-img {
-    width: clamp(450px, 70vh, 800px);
+    width: clamp(450px, 40vw, 800px);
     margin: 0px 0px;
     transition: all ease 0.5s;
 }
@@ -288,7 +288,7 @@ html{
 .sobre-img-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     min-width: 22vw;
     height: 500px;
     width: 100%;
@@ -397,6 +397,7 @@ html{
     max-width: 1700px;
 }
 .servicos-cards {
+    max-width: 1700px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -413,7 +414,7 @@ html{
     padding: 20px 20px;
     box-shadow: transparent;
     border-radius: 20px;
-    width: clamp(200px, 15vw, 300px);
+    width: clamp(200px, 22vh, 300px);
     height: 400px;
     border: 1px transparent;
     transition: all 0.5s ease;
@@ -429,8 +430,8 @@ html{
 .servicos-card:hover {
     position: relative;
     transform: translateY(-0px);
-    border: 1px solid #014D41;
-    /* box-shadow: 0px 0px 10px rgba(0,0,0, 0.1); */
+    /* border: 0px solid #014D41; */
+    box-shadow: 0px 0px 10px rgba(0,0,0, 0.15);
     .servicos-btn {
         background-color: #014D41;
         color: white;
@@ -451,7 +452,7 @@ html{
     text-align: center;
 }
 .servicos-card-content h3 {
-    font-size: clamp(20px, 2vw, 30px);
+    font-size: clamp(20px, 2vw, 25px);
     color: #022D17;
     margin: 20px 0px;
 }
@@ -576,5 +577,38 @@ html{
 /* DISPONIBILIDADE  */
 .modalidades {
     background-color: #043D37;
-    padding: 50px;
+    color: #f0f0f0;
+    padding: 50px 0px;
+}
+.modalidades-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modalidades-container h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.modalidades-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.modalidades-types {
+    
+}
+.modalidades-img-container {
+    width: 25vw;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-left: 300px;
+}
+.modalidades-img-container img {
+    
 }
