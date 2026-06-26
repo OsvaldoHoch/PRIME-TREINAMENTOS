@@ -574,7 +574,7 @@ html{
     filter: brightness(0) saturate(100%) invert(61%) sepia(56%) saturate(4882%) hue-rotate(135deg) brightness(96%) contrast(81%);
 }
 
-/* DISPONIBILIDADE  */
+/* MODALIDADES */
 .modalidades {
     background-color: #043D37;
     color: #f0f0f0;
@@ -593,13 +593,15 @@ html{
 }
 
 .modalidades-content {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 .modalidades-types {
-    
+    position: relative;
+    height: 60vh;
 }
 .modalidades-img-container {
     width: 25vw;
@@ -607,8 +609,17 @@ html{
     overflow: hidden;
     display: flex;
     justify-content: center;
-    padding-left: 300px;
 }
 .modalidades-img-container img {
     
+}
+.modalidades-text {
+    z-index: 15;
+}
+.sombra {
+    position: absolute;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+    height: 80vh;
+    width: 25vw;
+    z-index: 12;
 }
