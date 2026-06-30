@@ -589,7 +589,7 @@ html{
 }
 .modalidades-container h2 {
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .modalidades-content {
@@ -624,7 +624,7 @@ html{
 }
 .modalidades-img-container:hover img {
     border: 1px solid rgba(255, 255, 255, 1);
-    transform: scale(1.05)
+    transform: scale(1.025)
 }
 
 
@@ -665,4 +665,45 @@ html{
 .sombra:hover {
     /* background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)) !important; */
     opacity: 0.75;
+}
+
+/* SEÇÃO ESTRUTURAS */
+.estrutura-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* SEÇÃO CONSULTORIAS */
+.consultorias {
+    padding: 50px;
+}
+.consultorias-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.consultorias-content-img {
+    width: clamp(400px, 25vw, 450px);
+    height: clamp(500px, 70vh, 600px);
+    margin: 0px 0px;
+    transition: all ease 0.5s;
+}
+.consultorias-content-img:hover {
+    transform: scale(1.025);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.consultorias-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    min-width: 15vw;
+    height: 40vh;
+    width: 100%;
+    height: clamp(400px, 70vh, 500px);
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(4,54,65, 0.3);
 }
