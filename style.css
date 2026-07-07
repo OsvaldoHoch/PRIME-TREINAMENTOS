@@ -233,23 +233,36 @@ html{
 .hero-content img {
     width: clamp(500px, 50vw, 700px);
 }
+.hero-btn-a {
+    text-decoration: none;
+}
 .hero-btn {
     background-color: #C97C17;
-    padding: 10px 35px;
+    padding: 10px 25px;
     border-radius: 10px;
     border: 0px solid transparent;
     color: aliceblue;
-    font-size: clamp(15px, 1vw, 25px);
+    font-size: clamp(20px, 1vw, 25px);
     transition: all ease 0.3s;
-    font-weight: 500;
+    font-weight: 600;
     box-shadow: 0px 0px 20px rgba(235, 152, 35, 0.2);
     transition: all ease 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.hero-btn span {
+    text-decoration: none;
 }
 .hero-btn:hover {
     transform: scale(1.05);
     background-color: #df8c20;
     color: #fff;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+.hero-btn img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(352%) hue-rotate(261deg) brightness(118%) contrast(88%);
 }
 
 /* SEÇÃO SOBRE  */
@@ -513,7 +526,7 @@ html{
     width: 300px;
     height: 200px;
     padding: 20px;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 .treinamentos-card:hover {
     border: 1px solid #06816f;
@@ -677,7 +690,7 @@ html{
     justify-content: center;  
 }
 .estrutura-container h2 {
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 50px;
     font-weight: 700;
     color: #014D41;
@@ -685,12 +698,12 @@ html{
 .estrutura-container p {
     max-width: 800px;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
 
 }
 .estrutura-content {
-    margin: 40px 0;
+    margin: 30px 0;
     display: flex;
     flex-direction: row; 
     align-items: center;
@@ -699,8 +712,8 @@ html{
 .estrutura-imgs {
     width: 30vw;
     min-width: 700px;
-    max-width: 900px;
-    height: 50vh;
+    max-width: 800px;
+    /* height: 50vh; */
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -711,8 +724,8 @@ html{
 }
 .estrutura-img {
     background-color: #fff;
-    width: 170px;
-    height: 230px;
+    width: clamp(170px, 10vw, 200px);
+    height: clamp(230px, 30vh, 260px);
     border-bottom: 4px solid #06816f;
     border-radius: 10px;
     overflow: hidden;
@@ -722,19 +735,19 @@ html{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .estrutura-img img {
-    width: 150px;
+    width: clamp(150px, 10vw, 200px);
     transition: all 0.3s ease;
 }
 .estrutura-img:hover img {
     transform: scale(1.05);
 }
 .estrutura-text {
-    width: clamp(400px, 30vw, 1000px);
+    width: clamp(500px, 30vw, 1000px);
     height: fit-content;
     /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(20px, 3vh, 30px);
 }
 .estrutura-text-item {
     padding-left: 50px;
@@ -748,8 +761,8 @@ html{
 }
 .estrutura-text-img {
     background-color: #014D41;
-    width: 50px;
-    height: 50px;
+    width: clamp(50px, 3vw, 60px);
+    height: clamp(50px, 3vw, 60px);
     border-radius: 50%;
     padding: 20px;
     display: flex;
@@ -757,7 +770,7 @@ html{
     align-items: center;
 }
 .estrutura-text-item span {
-    font-size: 20px;
+    font-size: clamp(20px, 1.2vw, 25px);
     line-height: 30px;
 }
 .estrutura-text-img img {
@@ -770,11 +783,21 @@ html{
 .consultorias {
     width: 100%;
     height: 90vh;
-    background-image: linear-gradient(to right, rgb(4, 65, 60), rgb(4, 65, 60), rgba(4, 65, 60, 0.2)), url("imgs/Foto\ \(3\).jpeg");
+    min-height: 800px;
+    background-image: 
+    linear-gradient(110deg, 
+    rgb(4, 65, 60), 
+    rgba(4, 65, 60, 1), 
+    rgba(1, 77, 65, 1), 
+    rgba(1, 77, 65, 0.6), 
+    rgba(1, 77, 65, 0.1), 
+    rgba(1, 77, 65, 0)), 
+    url("imgs/Foto\ \(3\).jpeg") ;
     object-fit: cover !important; 
     position: relative;
     background-position: right;
     background-repeat: no-repeat;
+    background-size: auto 200%;
 }
 .consultorias-container {
     display: flex;
@@ -784,39 +807,51 @@ html{
     color: #f0f0f0;
 }
 .consultorias-container h2 {
-    margin: 60px 0px;
+    margin-top: 80px;
+    margin-bottom: 30px;
     font-size: 50px;
     font-weight: 700;
+    filter: drop-shadow(0px 0px 10px rgba(255,255,255, 0.3));
 }
-.consultorias-content {
-    max-width: 1280px;
-    display: flex;
-    flex-direction: row;
-    margin-right: 40vw;
+.consultorias-container p {
+    font-size: 25px;
+    width: 850px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 .consultorias-cards {
-    color: #022D17;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 50vw;
+    margin-right: 45vw;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     gap: 30px;
 }
 .consultorias-card {
-    padding: 20px;
-    background-color: rgba(255,255,255, 0.9);
-    border-radius: 10px;
-    border-left: 15px solid #06816f;
-}
-.consultorias-card-text {
-    margin-left: 20px;
-    width: 15vw;
-    height: 5vh;
     display: flex;
+    flex-direction: row;
     justify-content: left;
     align-items: center;
+    width: clamp(300px, 20vw, 400px);
+    height: 80px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #06816f;
+    background-color: rgba(255,255,255, 0.1);
+    /* color: #022D17; */
+    box-shadow: 0 0 10px rgba(24, 175, 150, 0.4);
+
+    /* transition: all 0.3s ease; */
 }
-.consultorias-card-text span {
-    font-size: clamp(20px, 1.2vw, 30px);
-    line-height: 30px;
+.consultorias-card:hover {
+    background-color: rgba(255,255,255, 0.2);
+    box-shadow: 0 0 10px rgba(24, 175, 150, 0.6);
+}
+.consultorias-card-text {
+    width: 250px;
+    font-size: clamp(15px, 1.2vw, 25px);
+    font-weight: 600;
+    line-height: 3vh;
+}
+.consultorias-card img {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(43%) saturate(2995%) hue-rotate(134deg) brightness(95%) contrast(81%);
+    /* filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(175%) hue-rotate(239deg) brightness(111%) contrast(95%); */
 }
